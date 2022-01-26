@@ -1,5 +1,16 @@
+/* FONTS USED: 
+Canopee => Canopee Regular
+Domain Display => DomaineDispCondMedium 
+Editorial New => Editorial New Light
+*/
+
 html,
 body {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -1,3 +1,4 @@
+/* ----------------------- BACKGROUND IMAGE ----------------------- */
 .paper-background {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
@@ -9,7 +10,11 @@
   bottom: 0;
   background-position: 50% 50%;
   opacity: 0.3;
+
+  z-index: -10;
 }
+
+/* ----------------------- NAV BAR ----------------------- */
 
 nav {
   display: flex;
@@ -33,4 +38,40 @@ nav img {
 }
 .upper-line {
   margin-bottom: 5px;
+}
+
+/* ----------------------- HEADER SECTION ----------------------- */
+
+header {
+  display: flex;
+  gap: 5vw;
+
+  list-style: none;
+
+  padding: 5vh 5vw; /* Later in development, in beginning our list should be in center like at 3 if 5 elements present. So then this left-right padding will be useful for us, but we used it in early phase of development. */
+
+  overflow-x: scroll;
+}
+
+header li {
+  flex-shrink: 0; /* Here we used this, so that browser should not try to supress all list elements at one place */
+  max-width: 30vw;
+  /* Our images are styled with 100% because of some default properties of flexbox like one written in above */
+  /* By default, by Flexbox our all list elements are divided equally */
+}
+
+header .img-block img {
+  width: 100%; /* If we didn't use this then our img try to acquire its original width */
+}
+
+header .txt-block {
+  max-width: 95%;
+}
+
+header .center-element {
+  text-align: center;
+}
+
+header .center-element .txt-block {
+  max-width: 100%;
 }
