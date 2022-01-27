@@ -1,7 +1,8 @@
 /* FONTS USED: 
 Canopee => Canopee Regular
-Domain Display => DomaineDispCondMedium 
+  - Have two font weights => 400, 600
 Editorial New => Editorial New Light
+ - Have three font weights => 300, 400, 600
 */
 
 html,
@@ -9,9 +10,20 @@ body {
   margin: 0;
   padding: 0;
   color: #1d1d1b;
+  background-color: rgba(196, 189, 181, 0.7);
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@font-face {
+  font-family: "Canopee Regular";
+  src: url("./fonts/Canopee.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Editorial New Light";
+  src: url("./fonts/EditorialNewLight.woff2");
 }
