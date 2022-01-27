@@ -1,0 +1,114 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "Area-4 Area-4 Area-4"
+    "Area-2 Area-3 Area-3"
+    "Area Area Area"
+    "Area-5 Area-5 Area-6"
+    "Area-11 Area-11 Area-11"
+    "Area-9 Area-9 Area-10"
+    "Area-8 Area-8 Area-8";
+  padding: 0 2vw;
+}
+
+.pad-t {
+  padding-top: 2vw;
+}
+
+/* Below style property is temporary */
+.grid > * {
+  overflow: hidden;
+}
+
+/* ------------------------------- MAIN HEADING ------------------------------- */
+
+.main-heading {
+  grid-area: Area-4;
+  text-align: center;
+
+  background-color: #1d1d1b;
+  color: #cdc6be;
+}
+
+.main-heading h1 {
+  font-size: 20vw;
+}
+
+/* ------------------------------- INTERACTIVE ARTIST ------------------------------- */
+
+.interactive-artist {
+  grid-area: Area-2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.interactive-artist img {
+  width: 80%;
+}
+
+.interactive-artist h2 {
+  max-width: 80%;
+  font-size: 5vw;
+  word-wrap: break-word;
+}
+
+.interactive-artist h5 {
+  font-size: 2.25vw;
+  max-width: 95%;
+}
+
+/* ------------------------------- SKILLS ------------------------------- */
+
+.skills {
+  grid-area: Area-3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skills img {
+  width: 100%;
+}
+
+.skills h2 {
+  font-size: 6vw;
+}
+
+/* ------------------------------- STAMP ------------------------------- */
+.stamp {
+  grid-area: Area;
+}
+.stamp-flex {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 2vw; */
+}
+
+.txt-content {
+  background-color: #1d1d1b;
+  color: #cdc6be;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 8vw;
+  width: 75vw;
+}
