@@ -149,6 +149,13 @@ p {
   width: 72vw;
 }
 
+.stamp .txt-content h1 {
+  font-size: 29vw;
+  line-height: 0vw;
+  letter-spacing: -0.05em;
+  padding-right: 2vw;
+}
+
 .stamp img {
   width: 22vw;
   margin-left: 5vw;
