@@ -179,3 +179,32 @@ p {
   text-decoration: none;
   color: inherit;
 }
+
+/* ------------------------------- ACHIEVEMENTS ------------------------------- */
+
+.achievements {
+  grid-area: Area-11;
+}
+
+.achievements ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.achievements li {
+  display: flex;
+}
+
+.achievements li .name {
+  font-size: 2vw;
+  text-align: center;
+}
+
+.achievements li .value {
+  font-size: 4vw;
+  font-weight: bold;
+
+  margin-left: 1vw;
+}
