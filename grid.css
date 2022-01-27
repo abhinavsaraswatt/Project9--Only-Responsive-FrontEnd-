@@ -10,7 +10,25 @@ p {
   padding: 0;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: "Editorial New Light";
+  font-weight: 300;
+}
+
 .grid {
+  background-color: #c4bdb5b3;
+
   display: grid;
   gap: 2rem;
   grid-auto-columns: 1fr;
@@ -45,7 +63,10 @@ p {
 }
 
 .main-heading h1 {
-  font-size: 20vw;
+  font-size: 38vw;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+  line-height: 32vw;
 }
 
 /* ------------------------------- INTERACTIVE ARTIST ------------------------------- */
@@ -56,6 +77,9 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  padding-right: 2vw;
+  border-right: 2px solid #1d1d1b80;
 }
 
 .interactive-artist img {
@@ -63,14 +87,22 @@ p {
 }
 
 .interactive-artist h2 {
-  max-width: 80%;
-  font-size: 5vw;
+  font-size: 7vw;
+  text-align: center;
   word-wrap: break-word;
+
+  line-height: 9vw;
+}
+
+.interactive-artist h2 span {
+  font-size: 13vw;
 }
 
 .interactive-artist h5 {
   font-size: 2.25vw;
   max-width: 95%;
+  letter-spacing: -0.02em;
+  line-height: 2.7vw;
 }
 
 /* ------------------------------- SKILLS ------------------------------- */
@@ -88,7 +120,7 @@ p {
 }
 
 .skills h2 {
-  font-size: 6vw;
+  font-size: 8.5vw;
 }
 
 /* ------------------------------- STAMP ------------------------------- */
@@ -109,14 +141,22 @@ p {
   align-items: center;
   justify-content: center;
 
-  font-size: 8vw;
-  width: 75vw;
+  font-size: 13vw;
+  width: 72vw;
+}
+
+.stamp img {
+  width: 22vw;
+  margin-left: 5vw;
 }
 
 /* ------------------------------- LATEST WORK ------------------------------- */
 
 .latest-work {
   grid-area: Area-5;
+
+  padding-right: 2vw;
+  border-right: 2px solid #1d1d1b80;
 }
 
 .latest-work .txt-content {
@@ -124,28 +164,45 @@ p {
   padding-bottom: 5vw;
 }
 
+.latest-work .txt-content > * {
+  flex: 1;
+}
+
 .latest-work img {
   width: 100%;
 }
 
 .latest-work .description {
-  width: 40%;
+  border-right: 2px solid #1d1d1b80;
 }
 
 .latest-work .description h2 {
-  font-size: 4vw;
+  font-size: 5.5vw;
 }
 
 .latest-work .description h5 {
-  font-size: 2vw;
+  font-size: 2.6vw;
+  line-height: 3vw;
+  text-align: left;
+  letter-spacing: -0.03em;
+  width: 90%;
+  margin-top: 1vw;
 }
 
 .latest-specific-post {
-  padding: 0 2vw;
+  padding-left: 2vw;
 }
 
-.latest-work .latest-specific-post {
-  width: 60%;
+.latest-specific-post h3 {
+  font-size: 2.2vw;
+  margin-top: 0.5vw;
+}
+
+.latest-specific-post p {
+  font-size: 1.2vw;
+  line-height: 1.5vw;
+  letter-spacing: -0.01em;
+  margin-top: 1vw;
 }
 
 /* ------------------------------- WHAT CAN I DO ------------------------------- */
@@ -157,27 +214,40 @@ p {
 }
 
 .what-can-i-do h1 {
-  font-size: 3.5vw;
+  font-size: 7.2vw;
   text-align: center;
+  line-height: 9vw;
+  letter-spacing: -0.06em;
+  margin-bottom: 2vw;
+}
+
+.what-can-i-do h1 span {
+  font-size: 14vw;
 }
 
 .what-can-i-do h5 {
-  padding-top: 3vw;
-  font-size: 2vw;
-  line-height: 3vw;
+  margin-bottom: 3vw;
+  font-size: 2.25vw;
+  line-height: 2.7vw;
+  letter-spacing: -0.019em;
 }
 
 .what-can-i-do a {
   border: 1px solid rgba(29, 29, 27, 0.5);
-  padding: 5vw 20%;
+  background-color: #d3cbc2;
   border-radius: 50%;
-  font-size: 2vw;
-
-  line-height: 20vw;
-  margin: 0 4vw;
 
   text-decoration: none;
   color: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+  font-size: 6vw;
+  letter-spacing: -0.04em;
+
+  font-family: "Canopee Regular", sans-serif;
 }
 
 /* ------------------------------- ACHIEVEMENTS ------------------------------- */
@@ -190,21 +260,36 @@ p {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding: 3.5vw 0 3vw 0;
 }
 
 .achievements li {
   display: flex;
+  gap: 0.5vw;
 }
 
 .achievements li .name {
-  font-size: 2vw;
+  font-size: 1.7vw;
   text-align: center;
+  line-height: 2vw;
+  letter-spacing: -0.03em;
+  font-family: "Editorial New Light", sans-serif;
+}
+
+.achievements li .name b {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  font-size: 5vw;
+  line-height: 5vw;
+  letter-spacing: -0.045em;
 }
 
 .achievements li .value {
-  font-size: 4vw;
-  font-weight: bold;
+  font-size: 11vw;
+  line-height: 6vw;
+  font-family: "Times New Roman", Times, serif;
+}
 
-  margin-left: 1vw;
+.achievements hr {
+  color: #1d1d1b80;
 }
