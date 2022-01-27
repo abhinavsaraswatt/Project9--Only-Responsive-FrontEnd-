@@ -101,7 +101,7 @@ p {
   /* gap: 2vw; */
 }
 
-.txt-content {
+.stamp .txt-content {
   background-color: #1d1d1b;
   color: #cdc6be;
 
@@ -111,4 +111,39 @@ p {
 
   font-size: 8vw;
   width: 75vw;
+}
+
+/* ------------------------------- LATEST WORK ------------------------------- */
+
+.latest-work {
+  grid-area: Area-5;
+}
+
+.latest-work .txt-content {
+  display: flex;
+  padding-bottom: 5vw;
+}
+
+.latest-work img {
+  width: 100%;
+}
+
+.latest-work .description {
+  width: 40%;
+}
+
+.latest-work .description h2 {
+  font-size: 4vw;
+}
+
+.latest-work .description h5 {
+  font-size: 2vw;
+}
+
+.latest-specific-post {
+  padding: 0 2vw;
+}
+
+.latest-work .latest-specific-post {
+  width: 60%;
 }
