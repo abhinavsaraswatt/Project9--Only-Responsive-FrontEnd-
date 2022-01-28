@@ -43,7 +43,8 @@ p {
     "Area-5 Area-5 Area-6"
     "Area-11 Area-11 Area-11"
     "Area-9 Area-9 Area-9"
-    "Area-8 Area-8 Area-8";
+    "Area-8 Area-8 Area-8"
+    "Area-7 Area-7 Area-7";
   padding: 0 2vw;
 }
 
@@ -364,4 +365,42 @@ p {
 .about-me-head-2 img {
   width: 29%;
   height: 22vw;
+}
+
+/* ------------------------------- ABOUT ME DETAILS ------------------------------- */
+.about-me-details {
+  grid-area: Area-7;
+  display: flex;
+
+  margin-bottom: 3vw;
+}
+
+.about-me-details h1 {
+  padding: 2vw 2vw 0.3vw 1vw;
+  background-color: #1d1d1b;
+  color: #cdc6be;
+  letter-spacing: -0.045em;
+  line-height: 20vw;
+  font-size: 25vw;
+  margin-right: 2vw;
+}
+
+.about-me-details h5 {
+  max-width: 95%;
+  font-size: 2vw;
+  line-height: 2.5vw;
+  letter-spacing: -0.02em;
+
+  align-self: center;
+}
+
+.about-me-details h5 a {
+  text-decoration: underline;
+}
+
+.about-me-details h5 b {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 600;
+  font-size: 7vw;
+  line-height: 8vw;
 }
