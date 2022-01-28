@@ -42,7 +42,7 @@ p {
     "Area Area Area"
     "Area-5 Area-5 Area-6"
     "Area-11 Area-11 Area-11"
-    "Area-9 Area-9 Area-10"
+    "Area-9 Area-9 Area-9"
     "Area-8 Area-8 Area-8";
   padding: 0 2vw;
 }
@@ -303,4 +303,47 @@ p {
 
 .achievements hr {
   color: #1d1d1b80;
+}
+
+/* ------------------------------- ABOUT ME HEAD 1 ------------------------------- */
+/* We can also build this section by using grid inside our main grid */
+
+.about-me-head-1 {
+  grid-area: Area-9;
+}
+
+.about-me-head-1 {
+  display: flex;
+  gap: 2vw;
+}
+
+.about-me-head-1 .col-1,
+.about-me-head-1 .col-2 {
+  width: 50%;
+}
+
+.about-me-head-1 .col-1 .first img {
+  display: inline;
+
+  width: 12vw;
+  margin-right: 1vw;
+}
+
+.about-me-head-1 .col-1 .first h1 {
+  display: inline;
+
+  font-size: 31vw;
+}
+
+.about-me-head-1 .col-1 .second h1 {
+  font-size: 31vw;
+}
+
+.about-me-head-1 .col-1 h1 {
+  line-height: 24vw;
+}
+
+.about-me-head-1 .col-2 img {
+  padding-top: 0.5vw;
+  height: 46vw;
 }
