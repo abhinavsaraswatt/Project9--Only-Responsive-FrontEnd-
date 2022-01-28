@@ -44,7 +44,8 @@ p {
     "Area-11 Area-11 Area-11"
     "Area-9 Area-9 Area-9"
     "Area-8 Area-8 Area-8"
-    "Area-7 Area-7 Area-7";
+    "Area-7 Area-7 Area-7"
+    "Area-10 Area-10 Area-10";
   padding: 0 2vw;
 }
 
@@ -403,4 +404,53 @@ p {
   font-weight: 600;
   font-size: 7vw;
   line-height: 8vw;
+}
+
+/* ------------------------------- FLASHCARDS ------------------------------- */
+
+.reviews-flashcards {
+  grid-area: Area-10;
+  margin-bottom: 3vw;
+
+  display: flex;
+}
+
+.reviews-flashcards li {
+  flex-shrink: 0;
+  padding: 2.5vw 3vw 3vw;
+  border: 2px solid #000;
+  border-radius: 0.8vw;
+
+  list-style: none;
+
+  transform: translate3d(0vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg);
+  /* transform-style: preserve-3d; */
+  /* background-color: rgb(205, 198, 190); */
+
+  box-shadow: -4px 4px 6px 0 rgba(29, 29, 27, 0.2);
+
+  width: 40vw;
+
+  margin-right: -30vw;
+}
+.reviews-flashcards .desc {
+  font-size: 2.2vw;
+  line-height: 3vw;
+  letter-spacing: -0.03em;
+
+  text-decoration: underline;
+  text-underline-offset: 0.3vw;
+  text-decoration-thickness: 0.5px;
+  text-decoration-color: #0000007a;
+}
+
+.dotted-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  padding: 0.7vw;
 }
