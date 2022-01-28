@@ -51,6 +51,10 @@ p {
   padding-top: 2vw;
 }
 
+.img-1px-outline {
+  border: 1px solid #000;
+}
+
 /* Below style property is temporary */
 .grid > * {
   overflow: hidden;
@@ -325,25 +329,39 @@ p {
 .about-me-head-1 .col-1 .first img {
   display: inline;
 
-  width: 12vw;
+  width: 29%;
+  height: 22vw;
   margin-right: 1vw;
 }
 
 .about-me-head-1 .col-1 .first h1 {
   display: inline;
+}
 
+.about-me-head-1 .col-1 .first h1,
+.about-me-head-1 .col-1 .second h1,
+.about-me-head-2 h1 {
   font-size: 31vw;
 }
 
-.about-me-head-1 .col-1 .second h1 {
-  font-size: 31vw;
-}
-
-.about-me-head-1 .col-1 h1 {
-  line-height: 24vw;
+.about-me-head-1 .col-1 h1,
+.about-me-head-2 h1 {
+  line-height: 23vw;
 }
 
 .about-me-head-1 .col-2 img {
-  padding-top: 0.5vw;
-  height: 46vw;
+  height: 45vw;
+}
+
+/* ------------------------------- ABOUT ME HEAD 2 ------------------------------- */
+
+.about-me-head-2 {
+  grid-area: Area-8;
+
+  display: flex;
+}
+
+.about-me-head-2 img {
+  width: 29%;
+  height: 22vw;
 }
