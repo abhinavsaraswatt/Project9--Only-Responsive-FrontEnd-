@@ -198,6 +198,12 @@ header .center-element h4 {
   margin-bottom: 3vw;
 }
 
+header .center-element {
+  border-right: 2px solid #1d1d1b80;
+  border-left: 2px solid #1d1d1b80;
+  padding: 0 5vw;
+}
+
 /* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GRID CSS FILE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
@@ -428,8 +434,41 @@ header .center-element h4 {
   padding: 3vw;
   font-size: 6vw;
   letter-spacing: -0.04em;
+  text-align: center;
 
   font-family: "Canopee Regular", sans-serif;
+
+  background-color: rgba(214, 210, 205);
+  transition: 0.5s background-color;
+}
+
+.what-can-i-do a:hover {
+  background-color: rgb(180, 172, 163);
+}
+
+.what-can-i-do .before {
+  opacity: 1;
+  transform: translateX(0vw);
+
+  transition: 0.5s all;
+}
+
+.what-can-i-do .after {
+  opacity: 0;
+  position: absolute;
+  transform: translateX(-10vw);
+
+  transition: 0.5s all;
+}
+
+.what-can-i-do a:hover .after {
+  transform: translateX(0vw);
+  opacity: 1;
+}
+
+.what-can-i-do a:hover .before {
+  transform: translateX(5vw);
+  opacity: 0;
 }
 
 /* ------------------------------- ACHIEVEMENTS ------------------------------- */
