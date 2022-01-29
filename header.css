@@ -1,16 +1,13 @@
-/* ----------------------- BACKGROUND IMAGE ----------------------- */
-.paper-background {
-  background-image: url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: 50% 50%;
-  opacity: 0.7;
-
-  z-index: -10;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 /* ----------------------- NAV BAR ----------------------- */
@@ -18,6 +15,7 @@
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   list-style: none;
 
@@ -25,8 +23,15 @@ nav {
   padding: 4vh 2vw;
 }
 
+nav .location {
+  font-family: "Editorial New Light", sans-serif;
+  font-weight: 300;
+  font-size: 2.8vh;
+  line-height: 2vh;
+}
+
 nav img {
-  width: 20vh;
+  width: 30vh;
   opacity: 1;
 }
 
@@ -69,18 +74,61 @@ header li {
   /* By default, by Flexbox our all list elements are divided equally */
 }
 
-header .img-block img {
-  width: 100%; /* If we didn't use this then our img try to acquire its original width */
+header h3 {
+  font-family: "Canopee Regular", sans-serif;
+  font-size: 2.15vw;
+  line-height: 2.5vw;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
-header .txt-block {
+header .img-block img {
+  width: 100%; /* If we didn't use this then our img try to acquire its original width */
+  outline: 1px solid #1d1d1d;
+}
+
+header p {
+  margin-top: 0.5vw;
   max-width: 95%;
+  font-size: 1.2vw;
+  line-height: 1.6vw;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-family: "Editorial New Light", sans-serif;
 }
 
 header .center-element {
   text-align: center;
 }
 
-header .center-element .txt-block {
-  max-width: 100%;
+header .center-element .tip {
+  font-family: "Editorial New Light", sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-size: 1.2vw;
+  line-height: 1.5vw;
+}
+
+header .center-element .tip b {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  line-height: 1.4vw;
+  margin-right: 0.5vw;
+}
+
+header .center-element h2 {
+  font-size: 5vw;
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+header .center-element h4 {
+  font-family: "Editorial New Light", sans-serif;
+  font-size: 2.5vw;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-top: 1vw;
+  margin-bottom: 3vw;
 }
