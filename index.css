@@ -33,12 +33,12 @@ a {
 
 @font-face {
   font-family: "Canopee Regular";
-  src: url("../fonts/Canopee.woff2") format("woff2");
+  src: url("./fonts/Canopee.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Editorial New Light";
-  src: url("../fonts/EditorialNewLight.woff2");
+  src: url("./fonts/EditorialNewLight.woff2");
 }
 
 /* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
