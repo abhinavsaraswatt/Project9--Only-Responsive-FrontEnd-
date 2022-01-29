@@ -1,0 +1,739 @@
+/* FONTS USED: 
+Canopee => Canopee Regular
+  - Have two font weights => 400, 600
+Editorial New => Editorial New Light
+ - Have three font weights => 300, 400, 600
+*/
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ BASE CSS FILE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #1d1d1b;
+  background-color: rgba(196, 189, 181, 0.7);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: "Canopee Regular";
+  src: url("../fonts/Canopee.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Editorial New Light";
+  src: url("../fonts/EditorialNewLight.woff2");
+}
+
+/* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ HEADER CSS FILE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+/* ----------------------- BACKGROUND IMAGE ----------------------- */
+.paper-background {
+  background-image: url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: 50% 50%;
+  opacity: 0.7;
+
+  z-index: -10;
+}
+
+/* ----------------------- NAV BAR ----------------------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+
+  border-bottom: 1px solid black;
+  padding: 4vh 2vw;
+}
+
+nav img {
+  width: 20vh;
+  opacity: 1;
+}
+
+.menu-line {
+  width: 2rem;
+  height: 3px;
+  background-color: black;
+}
+.upper-line {
+  margin-bottom: 5px;
+}
+
+/* ----------------------- HEADER SECTION ----------------------- */
+
+header {
+  display: flex;
+  gap: 5vw;
+
+  list-style: none;
+
+  padding: 5vh 5vw; /* Later in development, in beginning our list should be in center like at 3 if 5 elements present. So then this left-right padding will be useful for us, but we used it in early phase of development. */
+
+  overflow-x: scroll;
+}
+
+header li {
+  flex-shrink: 0; /* Here we used this, so that browser should not try to supress all list elements at one place */
+  max-width: 30vw;
+  /* Our images are styled with 100% because of some default properties of flexbox like one written in above */
+  /* By default, by Flexbox our all list elements are divided equally */
+}
+
+header .img-block img {
+  width: 100%; /* If we didn't use this then our img try to acquire its original width */
+}
+
+header .txt-block {
+  max-width: 95%;
+}
+
+header .center-element {
+  text-align: center;
+}
+
+header .center-element .txt-block {
+  max-width: 100%;
+}
+
+/* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GRID CSS FILE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: "Editorial New Light";
+  font-weight: 300;
+}
+
+.grid {
+  background-image: linear-gradient(
+      rgba(196, 189, 181, 0.7),
+      rgba(196, 189, 181, 0.7)
+    ),
+    url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
+
+  display: grid;
+  gap: 2rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "Area-4 Area-4 Area-4"
+    "Area-2 Area-3 Area-3"
+    "Area Area Area"
+    "Area-5 Area-5 Area-6"
+    "Area-11 Area-11 Area-11"
+    "Area-9 Area-9 Area-9"
+    "Area-8 Area-8 Area-8"
+    "Area-7 Area-7 Area-7"
+    "Area-10 Area-10 Area-10";
+  padding: 0 2vw;
+}
+
+.pad-t {
+  padding-top: 2vw;
+}
+
+.img-1px-outline {
+  border: 1px solid #000;
+}
+
+/* Below style property is temporary */
+.grid > * {
+  overflow: hidden;
+}
+
+/* ------------------------------- MAIN HEADING ------------------------------- */
+
+.main-heading {
+  grid-area: Area-4;
+  text-align: center;
+
+  background-color: #1d1d1b;
+  color: #cdc6be;
+}
+
+.main-heading h1 {
+  font-size: 38vw;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+  line-height: 32vw;
+}
+
+/* ------------------------------- INTERACTIVE ARTIST ------------------------------- */
+
+.interactive-artist {
+  grid-area: Area-2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-right: 2vw;
+  border-right: 2px solid #1d1d1b80;
+}
+
+.interactive-artist img {
+  width: 80%;
+}
+
+.interactive-artist h2 {
+  font-size: 7vw;
+  text-align: center;
+  word-wrap: break-word;
+
+  line-height: 9vw;
+}
+
+.interactive-artist h2 span {
+  font-size: 13vw;
+}
+
+.interactive-artist h5 {
+  font-size: 2.25vw;
+  max-width: 95%;
+  letter-spacing: -0.02em;
+  line-height: 2.7vw;
+}
+
+/* ------------------------------- SKILLS ------------------------------- */
+
+.skills {
+  grid-area: Area-3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skills img {
+  width: 100%;
+}
+
+.skills h2 {
+  font-size: 8.5vw;
+}
+
+/* ------------------------------- STAMP ------------------------------- */
+.stamp {
+  grid-area: Area;
+}
+.stamp-flex {
+  display: flex;
+  justify-content: space-between;
+  /* gap: 2vw; */
+}
+
+.stamp .txt-content {
+  background-color: #1d1d1b;
+  color: #cdc6be;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13vw;
+  width: 72vw;
+}
+
+.stamp .txt-content h1 {
+  font-size: 29vw;
+  line-height: 0vw;
+  letter-spacing: -0.05em;
+  padding-right: 2vw;
+}
+
+.stamp img {
+  width: 22vw;
+  margin-left: 5vw;
+}
+
+/* ------------------------------- LATEST WORK ------------------------------- */
+
+.latest-work {
+  grid-area: Area-5;
+
+  padding-right: 2vw;
+  border-right: 2px solid #1d1d1b80;
+}
+
+.latest-work .txt-content {
+  display: flex;
+  padding-bottom: 5vw;
+}
+
+.latest-work .txt-content > * {
+  flex: 1;
+}
+
+.latest-work img {
+  width: 100%;
+}
+
+.latest-work .description {
+  border-right: 2px solid #1d1d1b80;
+}
+
+.latest-work .description h2 {
+  font-size: 5.5vw;
+}
+
+.latest-work .description h5 {
+  font-size: 2.6vw;
+  line-height: 3vw;
+  text-align: left;
+  letter-spacing: -0.03em;
+  width: 90%;
+  margin-top: 1vw;
+}
+
+.latest-specific-post {
+  padding-left: 2vw;
+}
+
+.latest-specific-post h3 {
+  font-size: 2.2vw;
+  margin-top: 0.5vw;
+}
+
+.latest-specific-post p {
+  font-size: 1.2vw;
+  line-height: 1.5vw;
+  letter-spacing: -0.01em;
+  margin-top: 1vw;
+}
+
+/* ------------------------------- WHAT CAN I DO ------------------------------- */
+
+.what-can-i-do {
+  grid-area: Area-6;
+}
+
+.what-can-i-do h1 {
+  font-size: 7.2vw;
+  text-align: center;
+  line-height: 9vw;
+  letter-spacing: -0.06em;
+  margin-bottom: 2vw;
+}
+
+.what-can-i-do h1 span {
+  font-size: 14vw;
+}
+
+.what-can-i-do h5 {
+  margin-bottom: 3vw;
+  font-size: 2.25vw;
+  line-height: 2.7vw;
+  letter-spacing: -0.019em;
+}
+
+.what-can-i-do a {
+  border: 1px solid rgba(29, 29, 27, 0.5);
+  background-image: linear-gradient(
+      rgba(196, 189, 181, 0.7),
+      rgba(196, 189, 181, 0.7)
+    ),
+    url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
+  border-radius: 50%;
+
+  text-decoration: none;
+  color: inherit;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+  font-size: 6vw;
+  letter-spacing: -0.04em;
+
+  font-family: "Canopee Regular", sans-serif;
+}
+
+/* ------------------------------- ACHIEVEMENTS ------------------------------- */
+
+.achievements {
+  grid-area: Area-11;
+}
+
+.achievements ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5vw 0 3vw 0;
+}
+
+.achievements li {
+  display: flex;
+  gap: 0.5vw;
+}
+
+.achievements li .name {
+  font-size: 1.7vw;
+  text-align: center;
+  line-height: 2vw;
+  letter-spacing: -0.03em;
+  font-family: "Editorial New Light", sans-serif;
+}
+
+.achievements li .name b {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  font-size: 5vw;
+  line-height: 5vw;
+  letter-spacing: -0.045em;
+}
+
+.achievements li .value {
+  font-size: 11vw;
+  line-height: 6vw;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.achievements hr {
+  color: #1d1d1b80;
+}
+
+/* ------------------------------- ABOUT ME HEAD 1 ------------------------------- */
+/* We can also build this section by using grid inside our main grid */
+
+.about-me-head-1 {
+  grid-area: Area-9;
+}
+
+.about-me-head-1 {
+  display: flex;
+  gap: 2vw;
+}
+
+.about-me-head-1 .col-1,
+.about-me-head-1 .col-2 {
+  width: 50%;
+}
+
+.about-me-head-1 .col-1 .first img {
+  display: inline;
+
+  width: 29%;
+  height: 22vw;
+  margin-right: 1vw;
+}
+
+.about-me-head-1 .col-1 .first h1 {
+  display: inline;
+}
+
+.about-me-head-1 .col-1 .first h1,
+.about-me-head-1 .col-1 .second h1,
+.about-me-head-2 h1 {
+  font-size: 31vw;
+}
+
+.about-me-head-1 .col-1 h1,
+.about-me-head-2 h1 {
+  line-height: 23vw;
+}
+
+.about-me-head-1 .col-2 img {
+  height: 45vw;
+}
+
+/* ------------------------------- ABOUT ME HEAD 2 ------------------------------- */
+
+.about-me-head-2 {
+  grid-area: Area-8;
+
+  display: flex;
+}
+
+.about-me-head-2 img {
+  width: 29%;
+  height: 22vw;
+}
+
+/* ------------------------------- ABOUT ME DETAILS ------------------------------- */
+.about-me-details {
+  grid-area: Area-7;
+  display: flex;
+
+  margin-bottom: 3vw;
+}
+
+.about-me-details h1 {
+  padding: 2vw 2vw 0.3vw 1vw;
+  background-color: #1d1d1b;
+  color: #cdc6be;
+  letter-spacing: -0.045em;
+  line-height: 20vw;
+  font-size: 25vw;
+  margin-right: 2vw;
+}
+
+.about-me-details h5 {
+  max-width: 95%;
+  font-size: 2vw;
+  line-height: 2.5vw;
+  letter-spacing: -0.02em;
+
+  align-self: center;
+}
+
+.about-me-details h5 a {
+  text-decoration: underline;
+}
+
+.about-me-details h5 b {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 600;
+  font-size: 7vw;
+  line-height: 8vw;
+}
+
+/* ------------------------------- FLASHCARDS ------------------------------- */
+
+.reviews-flashcards {
+  grid-area: Area-10;
+
+  display: flex;
+}
+
+.reviews-flashcards li {
+  flex-shrink: 0;
+  padding: 2.5vw 3vw 3vw;
+  border: 2px solid #000;
+  border-radius: 0.8vw;
+
+  list-style: none;
+
+  transform: skew(0deg);
+  background-image: linear-gradient(
+      rgba(196, 189, 181, 0.7),
+      rgba(196, 189, 181, 0.7)
+    ),
+    url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
+
+  box-shadow: -4px 4px 6px 0 rgba(29, 29, 27, 0.2);
+
+  width: 39vw;
+
+  transition: 0.5s all;
+}
+.reviews-flashcards .desc {
+  font-size: 2.2vw;
+  line-height: 3vw;
+  letter-spacing: -0.03em;
+
+  text-decoration: underline;
+  text-underline-offset: 0.3vw;
+  text-decoration-thickness: 0.5px;
+  text-decoration-color: #0000007a;
+}
+
+.dotted-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  padding: 0.7vw;
+}
+
+.reviews-flashcards li:nth-child(2) {
+  position: relative;
+  left: -30vw;
+}
+.reviews-flashcards li:nth-child(3) {
+  position: relative;
+  left: -60vw;
+}
+.reviews-flashcards li:nth-child(4) {
+  position: relative;
+  left: -90vw;
+}
+
+.reviews-flashcards li:hover {
+  background-image: linear-gradient(
+      rgba(180, 172, 163, 0.7),
+      rgba(180, 172, 163, 0.7)
+    ),
+    url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
+}
+
+.reviews-flashcards .user img,
+.reviews-flashcards .user .info {
+  display: inline-block;
+}
+
+.reviews-flashcards .user img {
+  width: 3vw;
+  height: 3vw;
+  margin-right: 1vw;
+  border-radius: 50%;
+}
+
+.reviews-flashcards .user .info .name {
+  margin-bottom: 0.2vw;
+  font-size: 2.2vw;
+  line-height: 2vw;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.reviews-flashcards .user .info .role {
+  font-size: 1.4vw;
+  line-height: 1.3vw;
+  letter-spacing: -0.01em;
+}
+
+.reviews-flashcards li .content {
+  font-family: "Editorial New Light", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 20vw;
+  justify-content: space-between;
+}
+
+/* ------------------------------- FOOTER ------------------------------- */
+
+footer {
+  background-image: linear-gradient(
+      rgba(196, 189, 181, 0.7),
+      rgba(196, 189, 181, 0.7)
+    ),
+    url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
+
+  margin: 0 2vw;
+  overflow-x: hidden;
+  padding: 3vw 0 2vw;
+}
+
+@keyframes bettermarquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+footer .ticker {
+  white-space: nowrap;
+  width: 100%;
+}
+
+footer .ticker span {
+  font-family: "Editorial New Light", sans-serif;
+
+  font-size: 6vw;
+  line-height: 8vw;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+
+  width: 100%;
+
+  animation: bettermarquee 10s linear infinite;
+  position: relative;
+  left: 100%;
+}
+
+footer .ticker:hover span {
+  animation-play-state: paused;
+}
+
+footer .ticker a {
+  padding: 0.5vw 0.8vw 0.8vw;
+  background-color: #1d1d1b;
+  color: #cdc6be;
+  font-family: "Canopee Regular", sans-serif;
+}
+
+footer .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 2vw;
+}
+
+footer .left {
+  display: flex;
+  align-items: center;
+}
+
+footer .info .left h3 {
+  font-size: 1.6vw;
+  line-height: 1.3vw;
+  letter-spacing: -0.03em;
+}
+
+footer .info .left > * {
+  display: inline-block;
+}
+
+footer .info .left img {
+  width: 1.7vw;
+  margin-left: 1vw;
+}
+
+footer .info .left h4 {
+  font-size: 1.3vw;
+  line-height: 1.3vw;
+  margin-left: 0.5vw;
+}
+
+footer .info .right {
+  display: flex;
+  align-items: center;
+}
+
+footer .info .right a {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  letter-spacing: -0.02em;
+}
+
+footer .info .right .dot {
+  margin: 0 0.5vw;
+  font-size: 3vw;
+}
+
+/* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
