@@ -5,19 +5,10 @@ Editorial New => Editorial New Light
  - Have three font weights => 300, 400, 600
 */
 
-/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ BASE CSS FILE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
-
-/* FONTS USED: 
-Canopee => Canopee Regular
-  - Have two font weights => 400, 600
-Editorial New => Editorial New Light
- - Have three font weights => 300, 400, 600
-*/
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ BASIC SETUP & REUSABLE ITEMS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   color: #1d1d1b;
   background-image: linear-gradient(
       rgba(196, 189, 181, 0.7),
@@ -26,9 +17,37 @@ body {
     url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: "Editorial New Light";
+  font-weight: 300;
 }
 
 @font-face {
@@ -44,17 +63,6 @@ a {
 /* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ HEADER CSS FILE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 0;
-}
 
 /* ----------------------- NAV BAR ----------------------- */
 
@@ -183,34 +191,6 @@ header .center-element h4 {
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ GRID CSS FILE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3 {
-  font-family: "Canopee Regular", sans-serif;
-  font-weight: 400;
-  letter-spacing: -0.05em;
-}
-
-h4,
-h5,
-h6,
-p {
-  font-family: "Editorial New Light";
-  font-weight: 300;
-}
-
 .grid {
   display: grid;
   gap: 2rem;
@@ -236,7 +216,6 @@ p {
   border: 1px solid #000;
 }
 
-/* Below style property is temporary */
 .grid > * {
   overflow: hidden;
 }
@@ -319,7 +298,6 @@ p {
 .stamp-flex {
   display: flex;
   justify-content: space-between;
-  /* gap: 2vw; */
 }
 
 .stamp .txt-content {
@@ -488,7 +466,6 @@ p {
 }
 
 /* ------------------------------- ABOUT ME HEAD 1 ------------------------------- */
-/* We can also build this section by using grid inside our main grid */
 
 .about-me-head-1 {
   grid-area: Area-9;
