@@ -226,8 +226,6 @@ p {
 
 .what-can-i-do {
   grid-area: Area-6;
-
-  padding-top: 2vw;
 }
 
 .what-can-i-do h1 {
@@ -251,7 +249,11 @@ p {
 
 .what-can-i-do a {
   border: 1px solid rgba(29, 29, 27, 0.5);
-  background-color: #d3cbc2;
+  background-image: linear-gradient(
+      rgba(196, 189, 181, 0.7),
+      rgba(196, 189, 181, 0.7)
+    ),
+    url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
   border-radius: 50%;
 
   text-decoration: none;
@@ -424,7 +426,11 @@ p {
   list-style: none;
 
   transform: skew(0deg);
-  background-color: #cdc6be;
+  background-image: linear-gradient(
+      rgba(196, 189, 181, 0.7),
+      rgba(196, 189, 181, 0.7)
+    ),
+    url("https://uploads-ssl.webflow.com/5f2429f172d117fcee10e819/614f353f1e11a6a7afdd8b74_6059a3e2b9ae6d2bd508685c_pt-texture-2.jpg");
 
   box-shadow: -4px 4px 6px 0 rgba(29, 29, 27, 0.2);
 
@@ -468,4 +474,38 @@ p {
 
 .reviews-flashcards li:hover {
   background-color: #beb5ab;
+}
+
+.reviews-flashcards .user img,
+.reviews-flashcards .user .info {
+  display: inline-block;
+}
+
+.reviews-flashcards .user img {
+  width: 3vw;
+  height: 3vw;
+  margin-right: 1vw;
+  border-radius: 50%;
+}
+
+.reviews-flashcards .user .info .name {
+  margin-bottom: 0.2vw;
+  font-size: 2.2vw;
+  line-height: 2vw;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.reviews-flashcards .user .info .role {
+  font-size: 1.4vw;
+  line-height: 1.3vw;
+  letter-spacing: -0.01em;
+}
+
+.reviews-flashcards li .content {
+  display: flex;
+  flex-direction: column;
+  height: 20vw;
+  justify-content: space-between;
 }
