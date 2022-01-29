@@ -423,16 +423,14 @@ p {
 
   list-style: none;
 
-  transform: translate3d(0vw, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg);
-  /* transform-style: preserve-3d; */
-  /* background-color: rgb(205, 198, 190); */
+  transform: skew(0deg);
+  background-color: #cdc6be;
 
   box-shadow: -4px 4px 6px 0 rgba(29, 29, 27, 0.2);
 
-  width: 40vw;
+  width: 39vw;
 
-  margin-right: -30vw;
+  transition: 0.5s all;
 }
 .reviews-flashcards .desc {
   font-size: 2.2vw;
@@ -453,4 +451,21 @@ p {
   bottom: 0;
   z-index: 0;
   padding: 0.7vw;
+}
+
+.reviews-flashcards li:nth-child(2) {
+  position: relative;
+  left: -30vw;
+}
+.reviews-flashcards li:nth-child(3) {
+  position: relative;
+  left: -60vw;
+}
+.reviews-flashcards li:nth-child(4) {
+  position: relative;
+  left: -90vw;
+}
+
+.reviews-flashcards li:hover {
+  background-color: #beb5ab;
 }
