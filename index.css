@@ -125,6 +125,7 @@ header {
   cursor: grab;
   user-select: none;
   transform: scale(0.98);
+  touch-action: none;
 }
 
 .active {

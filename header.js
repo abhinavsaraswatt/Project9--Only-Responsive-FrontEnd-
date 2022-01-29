@@ -13,24 +13,36 @@ let isDown = false;
 let startX;
 let scrollLeft;
 
-slider.addEventListener("mousedown", (e) => {
+const gestureStart = (e) => {
   isDown = true;
   slider.classList.add("active");
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener("mouseleave", () => {
+};
+
+const gestureEnd = () => {
   isDown = false;
   slider.classList.remove("active");
-});
-slider.addEventListener("mouseup", () => {
-  isDown = false;
-  slider.classList.remove("active");
-});
-slider.addEventListener("mousemove", (e) => {
+};
+
+const gestureMove = (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - slider.offsetLeft;
   const walk = (x - startX) * 3; //scroll-fast
   slider.scrollLeft = scrollLeft - walk;
-});
+};
+
+if (window.PointerEvent) {
+  window.addEventListener("pointerdown", gestureStart);
+  window.addEventListener("pointerup", gestureEnd);
+  window.addEventListener("pointermove", gestureMove);
+} else {
+  window.addEventListener("touchdown", gestureStart);
+  window.addEventListener("touchup", gestureEnd);
+  window.addEventListener("touchmove", gestureMove);
+
+  window.addEventListener("mousedown", gestureStart);
+  window.addEventListener("mouseup", gestureEnd);
+  window.addEventListener("mousemove", gestureMove);
+}
