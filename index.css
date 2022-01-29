@@ -120,12 +120,11 @@ header {
 
   padding: 5vh 5vw; /* Later in development, in beginning our list should be in center like at 3 if 5 elements present. So then this left-right padding will be useful for us, but we used it in early phase of development. */
 
-  overflow-x: scroll;
+  overflow-x: hidden;
 
   cursor: grab;
   user-select: none;
   transform: scale(0.98);
-  scrollbar-width: none;
 }
 
 .active {
