@@ -281,7 +281,7 @@ header .center-element {
 }
 
 .interactive-artist h2 span {
-  font-size: 13vw;
+  font-size: 12vw;
 }
 
 .interactive-artist h5 {
@@ -289,6 +289,15 @@ header .center-element {
   max-width: 95%;
   letter-spacing: -0.02em;
   line-height: 2.7vw;
+}
+
+@media (max-width: 850px) {
+  .interactive-artist h2 {
+    font-size: 6vw;
+  }
+  .interactive-artist h2 span {
+    font-size: 11vw;
+  }
 }
 
 /* ------------------------------- SKILLS ------------------------------- */
@@ -404,7 +413,7 @@ header .center-element {
 }
 
 .what-can-i-do h1 {
-  font-size: 7.2vw;
+  font-size: 7vw;
   text-align: center;
   line-height: 9vw;
   letter-spacing: -0.06em;
@@ -412,7 +421,7 @@ header .center-element {
 }
 
 .what-can-i-do h1 span {
-  font-size: 14vw;
+  font-size: 13vw;
 }
 
 .what-can-i-do h5 {
@@ -472,6 +481,14 @@ header .center-element {
   opacity: 0;
 }
 
+@media (max-width: 500px) {
+  .what-can-i-do h1 {
+    font-size: 6vw;
+  }
+  .what-can-i-do h1 span {
+    font-size: 12vw;
+  }
+}
 /* ------------------------------- ACHIEVEMENTS ------------------------------- */
 
 .achievements {
@@ -568,7 +585,7 @@ header .center-element {
 }
 
 .about-me-head-2 img {
-  width: 29%;
+  width: 20%;
   height: 22vw;
 }
 
@@ -817,3 +834,9 @@ footer .info .right .dot {
 }
 
 /* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
+
+@media (max-width: 500px) {
+  .grid {
+    gap: 1rem;
+  }
+}
