@@ -263,6 +263,7 @@ header .center-element {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   padding-right: 2vw;
   border-right: 2px solid #1d1d1b80;
