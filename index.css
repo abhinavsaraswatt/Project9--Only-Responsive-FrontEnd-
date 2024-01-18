@@ -499,7 +499,7 @@ header .center-element {
 .achievements ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 3.5vw 0 3vw 0;
 }
 
