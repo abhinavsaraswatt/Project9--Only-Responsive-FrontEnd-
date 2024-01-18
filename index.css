@@ -834,6 +834,9 @@ footer .info .right .dot {
   font-size: 3vw;
 }
 
+#handle {
+  display: flex;
+}
 /* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
 
 @media (max-width: 500px) {
