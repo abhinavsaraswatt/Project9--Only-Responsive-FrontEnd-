@@ -209,6 +209,7 @@ header .center-element {
   font-size: 7vw;
   letter-spacing: -0.03em;
   word-spacing: 0.1em;
+  padding: 0 5vw;
 }
 
 .art-content {
