@@ -199,12 +199,11 @@ header .center-element {
 /* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Article Heading ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
-hr {
+#head-line {
   width: 80%;
   margin-top: 5vh;
   margin-bottom: 7vh;
 }
-
 #art-head {
   text-align: center;
   font-size: 7vw;
@@ -221,4 +220,115 @@ hr {
   letter-spacing: 0.05em;
   word-spacing: 0.05em;
   font-size: 1.3em;
+}
+
+/* ------------------------------- FOOTER ------------------------------- */
+
+footer {
+  margin: 0 2vw;
+  overflow-x: hidden;
+  padding: 3vw 0 2vw;
+}
+
+@keyframes bettermarquee {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+footer .ticker {
+  white-space: nowrap;
+  width: 100%;
+}
+
+footer .ticker span {
+  font-family: "Editorial New Light", sans-serif;
+
+  font-size: 6vw;
+  line-height: 8vw;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+
+  width: 100%;
+
+  animation: bettermarquee 10s linear infinite;
+  position: relative;
+  left: 100%;
+}
+
+footer .ticker:hover span {
+  animation-play-state: paused;
+}
+
+footer .ticker a {
+  padding: 0.5vw 0.8vw 0.8vw;
+  background-color: #1d1d1b;
+  color: #cdc6be;
+  font-family: "Canopee Regular", sans-serif;
+}
+
+footer .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 2vw;
+}
+
+footer .left {
+  display: flex;
+  align-items: center;
+}
+
+footer .info .left h3 {
+  font-size: 1.6vw;
+  line-height: 1.3vw;
+  letter-spacing: -0.03em;
+}
+
+footer .info .left > * {
+  display: inline-block;
+}
+
+footer .info .left img {
+  width: 1.7vw;
+  margin-left: 1vw;
+}
+
+footer .info .left h4 {
+  font-size: 1.3vw;
+  line-height: 1.3vw;
+  margin-left: 0.5vw;
+}
+
+footer .info .right {
+  display: flex;
+  align-items: center;
+}
+
+footer .info .right a {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  letter-spacing: -0.02em;
+}
+
+footer .info .right .dot {
+  margin: 0 0.5vw;
+  font-size: 3vw;
+}
+
+#handle {
+  display: flex;
+}
+/* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
+
+@media (max-width: 500px) {
+  .grid {
+    gap: 1rem;
+  }
 }
