@@ -1,0 +1,213 @@
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ BASIC SETUP & REUSABLE ITEMS ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+html,
+body {
+  color: #1d1d1b;
+  background-image: linear-gradient(
+      rgba(196, 189, 181, 0.7),
+      rgba(196, 189, 181, 0.7)
+    ),
+    url("./texture.jpg");
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+}
+
+h4,
+h5,
+h6,
+p {
+  font-family: "Editorial New Light";
+  font-weight: 300;
+}
+
+.has-dropcap::first-letter {
+  font-family: "Canopee Regular", sans-serif;
+  font-feature-settings: "ss03";
+  font-size: 7vw;
+  line-height: 5vw;
+  margin: 0.7vw 1vw 1vw 0vw;
+  background-color: #1d1d1b;
+  color: #cdc6be;
+  padding: 0.75vw 0.4vw 0.5vw 0.5vw;
+  float: left;
+}
+
+@font-face {
+  font-family: "Canopee Regular";
+  src: url("./fonts/Canopee.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Editorial New Light";
+  src: url("./fonts/EditorialNewLight.woff2");
+}
+
+/* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
+
+/* ----------------------- NAV BAR ----------------------- */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style: none;
+
+  border-bottom: 1px solid black;
+  padding: 4vh 2vw;
+}
+
+nav .location {
+  font-family: "Editorial New Light", sans-serif;
+  font-weight: 300;
+  font-size: 2.8vh;
+  line-height: 2vh;
+}
+
+nav img {
+  width: 30vh;
+  opacity: 1;
+}
+
+.menu-line {
+  width: 2rem;
+  height: 3px;
+  background-color: black;
+}
+.upper-line {
+  margin-bottom: 5px;
+}
+
+/* ----------------------- HEADER SECTION ----------------------- */
+
+header {
+  display: flex;
+  gap: 5vw;
+
+  list-style: none;
+
+  padding: 5vh 5vw; /* Later in development, in beginning our list should be in center like at 3 if 5 elements present. So then this left-right padding will be useful for us, but we used it in early phase of development. */
+
+  overflow-x: hidden;
+
+  cursor: grab;
+  user-select: none;
+  transform: scale(0.98);
+  touch-action: none;
+}
+
+.active {
+  transform: scale(1);
+  cursor: grabbing;
+}
+
+header li {
+  flex-shrink: 0; /* Here we used this, so that browser should not try to supress all list elements at one place */
+  max-width: 30vw;
+  /* Our images are styled with 100% because of some default properties of flexbox like one written in above */
+  /* By default, by Flexbox our all list elements are divided equally */
+}
+
+header h3 {
+  font-family: "Canopee Regular", sans-serif;
+  font-size: 2.15vw;
+  line-height: 2.5vw;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+header .img-block img {
+  width: 100%; /* If we didn't use this then our img try to acquire its original width */
+  outline: 1px solid #1d1d1d;
+}
+
+header p {
+  margin-top: 0.5vw;
+  max-width: 95%;
+  font-size: 1.2vw;
+  line-height: 1.6vw;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-family: "Editorial New Light", sans-serif;
+}
+
+header .center-element {
+  text-align: center;
+}
+
+header .center-element .tip {
+  font-family: "Editorial New Light", sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  font-size: 1.2vw;
+  line-height: 1.5vw;
+}
+
+header .center-element .tip b {
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  line-height: 1.4vw;
+  margin-right: 0.5vw;
+}
+
+header .center-element h2 {
+  font-size: 5vw;
+  font-family: "Canopee Regular", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+
+header .center-element h4 {
+  font-family: "Editorial New Light", sans-serif;
+  font-size: 2.5vw;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-top: 1vw;
+  margin-bottom: 3vw;
+}
+
+header .center-element {
+  border-right: 2px solid #1d1d1b80;
+  border-left: 2px solid #1d1d1b80;
+  padding: 0 5vw;
+}
+
+/* ------------------------^^^^^^^^^^^^^^^^^^^^^^^^^-------------------------- */
+
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Article Heading ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+hr {
+  width: 80%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#art-head {
+  text-align: center;
+  font-size: 7vw;
+  letter-spacing: -0.03em;
+  word-spacing: 0.1em;
+}
